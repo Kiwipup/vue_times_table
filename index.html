@@ -5,18 +5,19 @@
         <title>Vue times-table</title>
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
         <link rel="stylesheet" href="style.css"/>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
     </head>
     <body>
 
         <h1 class="mt-5 mb-5">Vue Times Table</h1>
 
-    <div id="app">
+    <div id="app" v-cloak>
 
-      <p class="slaert alert-danger" v-if="showRowError">
+      <p class="alert alert-danger" v-if="showRowError">
         <strong>Number of Rows</strong> must be an integer between {{ minInput }} and {{ maxInput }}
       </p>
 
-      <p class="slaert alert-danger" v-if="showColError">
+      <p class="alert alert-danger" v-if="showColError">
         <strong>Number of Columns</strong> must be an integer between {{ minInput }} and {{ maxInput }}
       </p>
 
